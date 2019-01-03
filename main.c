@@ -23,6 +23,7 @@ int main(int argc, char* argv[])
     {
         printf("usage: ./app <RGB888 color>\n");
         printf("eg   : ./app 0xFF0000\n");
+        printf("\n");
         return -1;
     }
 
@@ -36,6 +37,7 @@ int main(int argc, char* argv[])
         printf("  err fmt1: 0xFF00\n");
         printf("  err fmt2: FF0000\n");
         printf("  err fmt2: 0xxFFFFF\n\n");
+        printf("\n");
         return -1;
     }
 
@@ -84,5 +86,6 @@ int main(int argc, char* argv[])
     printf("u = 0x%x(h), %d(d), %f(f)\n", output_u, output_u, u);
     printf("v = 0x%x(h), %d(d), %f(f)\n", output_v, output_v, v);
 
+    printf("\n");
     return 0;
 }
