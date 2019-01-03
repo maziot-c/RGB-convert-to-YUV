@@ -23,7 +23,20 @@ int main(int argc, char* argv[])
     {
         printf("usage: ./app <RGB888 color>\n");
         printf("eg   : ./app 0xFF0000\n");
-        return 0;
+        return -1;
+    }
+
+    if(strlen(argv[1]) != 8)
+    {
+        printf("please enter Full color value\n");
+        printf("  eg1: 0xFFFFFF\n");
+        printf("  eg2: 0xFF0000\n");
+        printf("  eg3: 0x123456\n\n");
+        printf("The following format is incorrect\n");
+        printf("  err fmt1: 0xFF00\n");
+        printf("  err fmt2: FF0000\n");
+        printf("  err fmt2: 0xxFFFFF\n\n");
+        return -1;
     }
 
     input_rgb = (unsigned int)strtol(argv[1], NULL, 0);
